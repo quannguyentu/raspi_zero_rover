@@ -57,7 +57,7 @@ class gamepad():
         max_trigger = 1023
 
         for event in self.device_file.async_read_loop():
-                if not(self.power_on): #stop reading device when power_on = false
+                if self.button_b: #stop reading device when power_on = false
                     break
                 # print(str(event.type) + ' ' + str(event.code) + ' ' + str(event.value))
                 # print("\r", self.LeftJoystickX, " ", self.LeftJoystickY, sep=' ', end="",flush=True)
